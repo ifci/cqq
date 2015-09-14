@@ -8,7 +8,7 @@
 .news_list li .time {
   font-family: Arial; }
 
-.news_list li .tit, .news_l .news_np span, .news_l .news_np a {
+.news_list li .tit, .news_l .news_np span, .news_l .news_np a, .pintro_list .tit {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; }
@@ -28,7 +28,7 @@
     clear: both;
     visibility: hidden; }
 
-.news_list li .box, .news_l, .pshow li:nth-child(odd) .con, .pshow li .box, .pshow li .con {
+.news_list li .box, .news_l, .pshow li:nth-child(odd) .con, .pshow li .box, .pshow li .con, .pintro_list li, .pdetails_zoom, .pdetails_sx {
   float: left; }
 
 .news_list li:nth-child(odd) .box, .news_r, .pshow li:nth-child(odd) .box {
@@ -242,6 +242,60 @@
   text-align: center;
   line-height: 2; }
 
+.pintro_list {
+  text-align: center;
+  padding-bottom: 100px; }
+  .pintro_list li {
+    width: 280px;
+    margin: 50px 20px 0 0; }
+    .pintro_list li:hover .box {
+      border: 1px solid #02b686; }
+    .pintro_list li:hover .tit {
+      border-bottom: 1px solid #02b686; }
+  .pintro_list .box {
+    border: 1px solid #d6d6d6;
+    height: 200px;
+    overflow: hidden; }
+  .pintro_list img {
+    width: 100%; }
+  .pintro_list .tit {
+    border-bottom: 1px solid #d6d6d6;
+    line-height: 32px; }
+
+.pdetails {
+  margin-top: 50px; }
+
+.pdetails_zoom {
+  width: 43%;
+  height: 520px;
+  border: 1px solid #d6d6d6;
+  margin-left: 2%; }
+  .pdetails_zoom img {
+    width: 100%; }
+
+.pdetails_sx {
+  margin-left: 3%;
+  width: 38%; }
+  .pdetails_sx .tit {
+    font-size: 24px;
+    color: #333;
+    margin-top: 40px; }
+  .pdetails_sx .ftit {
+    padding: 10px 0;
+    border-bottom: 1px solid #d6d6d6; }
+  .pdetails_sx .pri {
+    color: #02b686;
+    padding: 10px 0;
+    border-bottom: 1px solid #d6d6d6; }
+    .pdetails_sx .pri em {
+      font-size: 28px; }
+  .pdetails_sx .spa {
+    line-height: 2;
+    padding: 10px 0; }
+    .pdetails_sx .spa span {
+      margin-right: 30px;
+      display: inline-block; }
+
 @media screen and (max-width: 750px) {
   .header {
     background: #02b686; }
@@ -326,6 +380,10 @@
         height: 270px; }
       .pshow li .tit {
         margin-top: 10px;
-        font-size: 18px; } }
+        font-size: 18px; }
+
+  .pintro_list li {
+    display: inline-block;
+    float: none; } }
 
 /*# sourceMappingURL=combo.css.map */

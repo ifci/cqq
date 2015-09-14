@@ -286,6 +286,83 @@
   line-height: 2;
 }
 
+.pintro_list{
+  @include align;
+  padding-bottom: 100px;
+  li{
+    width: 280px;
+    @extend %fl;
+    margin: 50px 20px 0 0;
+    &:hover{
+      .box{
+        @include border($color);
+      }
+      .tit{
+        @include bor(bottom,$color);
+      }
+    }
+  }
+  .box{
+    @include border;
+    height: 200px;
+    overflow: hidden;
+  }
+  img{
+    width: 100%;
+  }
+  .tit{
+    @include bor(bottom);
+    @extend %nowrap;
+    line-height: 32px;
+  }
+}
+
+.pdetails{
+  margin-top: 50px;
+}
+
+.pdetails_zoom{
+  width: 43%;
+  height: 520px;
+  @include border;
+  @extend %fl;
+  margin-left: 2%;
+  img{
+    width: 100%;
+  }
+}
+
+.pdetails_sx{
+  margin-left: 3%;
+  @extend %fl;
+  width: 38%;
+  .tit{
+    @include fz(24px);
+    color: #333;
+    margin-top: 40px;
+  }
+  .ftit{
+    padding: 10px 0;
+    @include bor(bottom);
+  }
+  .pri{
+    color: $color;
+    padding: 10px 0;
+    @include bor(bottom);
+    em{
+      @include fz(28px);
+    }
+  }
+  .spa{
+    line-height: 2;
+    padding: 10px 0;
+    span{
+      margin-right: 30px;
+      display: inline-block;
+    }
+  }
+}
+
 
 
 
@@ -398,6 +475,14 @@
       }
     }
   }
+
+  .pintro_list{
+    li{
+      display: inline-block;
+      float: none;
+    }
+  }
+
 }
 
 
