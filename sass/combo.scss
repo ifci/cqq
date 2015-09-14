@@ -1,0 +1,418 @@
+@import "extend";
+
+.main_t{
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 380px;
+}
+
+.main_c{
+  height: 190px;
+  background: url(../images/pic_16.jpg) no-repeat;
+  @include align;
+  @include bor(bottom);
+  .tit{
+    @extend %inline,%pr;
+    @include border;
+    margin-top: 40px;
+    color: #333;
+    @include fz(20px);
+    padding: 8px 40px;
+  }
+  i{
+    display: block;
+    @extend %pa;
+    width: 140px;
+    @include bor(top);
+    top: 22px;
+  }
+  .i0{
+    left: -120px;
+  }
+  .i1{
+    right: -120px;
+  }
+  .bread{
+    margin-top: 10px;
+  }
+  .tabs{
+    margin-top: 12px;
+    a{
+      @extend %inline;
+      padding: 8px 12px;
+      @include border;
+      margin: 0 8px;
+      &.on,&:hover{
+        background: $color;
+        color: #fff;
+      }
+    }
+  }
+}
+
+/*新闻列表*/
+.news_list{
+  padding-bottom: 100px;
+  li{
+    margin-top: 68px;
+    @extend %clearfix;
+    .box{
+      @extend %fl;
+      width: 310px;
+      height: 180px;
+      overflow: hidden;
+      img{
+        width: 100%;
+        display: block;
+      }
+    }
+    .wrap{
+      width: 100%;
+    }
+    .con{
+      margin-left: 330px;
+      background: #f6f6f6;
+      padding: 0 38px 25px;
+    }
+    .time{
+      @extend %ffar,%inline;
+      @include fz(16px);
+      border-top: 4px solid $color;
+      line-height: 34px;
+    }
+    .tit{
+      @extend %nowrap;
+      color: #333;
+      @include fz(18px);
+    }
+    .txt{
+      margin-top: 10px;
+      height: 48px;
+      overflow: hidden;
+      line-height: 1.8;
+    }
+    .more{
+      @extend %inline;
+      color: $color;
+      margin-top: 16px;
+    }
+    &:nth-child(odd){
+      .box{
+        @extend %fr;
+      }
+      .con{
+        margin: 0 330px 0 0;
+      }
+    }
+  }
+}
+
+
+/*新闻详情*/
+.news{
+  margin-top: 50px;
+}
+.news_l{
+  width: 100%;
+  @extend %fl;
+  .tit{
+    @include fz(24px);
+    color: #333;
+    @include align;
+  }
+  .date{
+    color: #999;
+    @include align;
+    @include fz(16px);
+    margin-top: 14px;
+  }
+  .con{
+    @include bor(top,#dfdfe2);
+    margin-top: 18px;
+    padding: 16px 0;
+    color: #666;
+    @include fz(14px);
+    line-height: 30px;
+    img{
+      width: 100%;
+    }
+  }
+  .share{
+    @include bor(bottom,#dfdfe2);
+    padding-bottom: 24px;
+    width: 100%;
+    float: none;
+  }
+  .news_b{
+    padding-top: 30px;
+    @include fz(16px);
+  }
+  .news_np{
+    @include border(#c5c4c5);
+    background: #f3f3f2;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    max-width: 500px;
+    margin-bottom: 20px;
+    span,a{
+      display: block;
+      padding: 0 28px;
+      line-height: 34px;
+      @extend %nowrap;
+    }
+    a{
+      height: 100%;
+      &:hover{
+        background: #000;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.news_lc{
+  margin-right: 265px;
+}
+
+.news_r{
+  width: 245px;
+  margin-left: -245px;
+  @extend %fr;
+  li{
+    padding: 0 20px 20px;
+  }
+  img{
+    width: 100%;
+  }
+  .tit {
+     font-size: 16px;
+     line-height: 24px;
+     margin-top: 8px;
+     height: 48px;
+     font-weight: bold;
+     overflow: hidden;
+  }
+  .txt {
+    font-size: 14px;
+    line-height: 24px;
+    height: 70px;
+    overflow: hidden;
+  }
+  .time {
+    width: 38px;
+    border-top: 2px solid #c8c7cc;
+    font-size: 14px;
+    color: #999;
+    margin-top: 8px;
+    padding-top: 4px;
+  }
+}
+
+
+/*产品展示*/
+.pshow{
+  margin-top: 20px;
+  li{
+    @extend %clearfix;
+    @include align;
+    height: 270px;
+    &:nth-child(odd){
+      .box{
+        @extend %fr;
+      }
+      .con{
+        @extend %fl;
+      }
+    }
+    .box{
+      width: 50%;
+      @extend %fl;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: top center;
+    }
+    img{
+      width: 100%;
+      display: block;
+    }
+    a{
+      display: block;
+      height: 100%;
+      color: #fff;
+    }
+    .con{
+      width: 50%;
+      height: 100%;
+      @extend %fl;
+      background: $color;
+    }
+    .tit{
+      @extend %inline;
+      @include fz(24px);
+      @include bor(bottom, #fff);
+      padding: 10px 30px;
+      margin-top: 20px;
+    }
+    .txt{
+      line-height: 2;
+      padding: 10px 20px;
+      overflow: hidden;
+      text-align: justify;
+      color: #ddf2ea;
+    }
+  }
+}
+
+
+/*产品介绍*/
+.pintro{
+
+}
+
+.pintro_video{
+  border: 5px solid $color;
+  max-width: 600px;
+  height: 400px;
+  margin: 40px auto 0;
+}
+
+.pintro_det{
+  max-width: 600px;
+  margin: 20px auto 0;
+  @include align;
+  line-height: 2;
+}
+
+
+
+
+@media screen and (max-width: 750px) {
+  .header{
+    background: $color;
+  }
+  .main_t,.bread{
+    display: none;
+  }
+  .logo{
+    visibility: hidden;
+  }
+  div.x, div.y, div.z{
+    background: #fff;
+  }
+  .main_c{
+    background: none;
+    border-bottom: none;
+    height: 100px;
+    margin-top: -50px;
+    .tit{
+      margin: 0;
+      border: none;
+      color: #fff;
+      i{
+        display: none;
+      }
+    }
+    .tabs{
+      margin-top: 22px;
+    }
+  }
+  .news_list{
+    padding-bottom: 40px;
+    li{
+      margin: 1em 0 0 4%;
+      width: 44%;
+      float: left;
+      .box {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        float: none !important;
+      }
+      .con{
+        margin: 0 !important;
+        padding: 0 10px;
+      }
+      .more{
+        display: none;
+      }
+      .time{
+        line-height: 28px;
+        font-size: 14px;
+      }
+      .tit{
+        font-size: 16px;
+      }
+      .txt{
+        line-height: 1.6;
+        margin-top: 4px;
+      }
+    }
+  }
+
+  .news_r{
+    display: none;
+  }
+
+  .news_lc{
+    margin-right: 0;
+  }
+
+  .news{
+    margin-top: 20px;
+  }
+
+  .news_l{
+    .tit{
+      font-size: 20px;
+    }
+    .date{
+      font-size: 12px;
+      margin-top: 6px;
+    }
+    .con{
+      margin-top: 10px;
+      padding: 10px;
+    }
+  }
+
+  .pshow{
+    margin-top: -40px;
+    padding: 0 10px;
+    li{
+      max-width: 600px;
+      margin: 0 auto 20px;
+      height: auto;
+      .box,.con{
+        float: none;
+        width: 100%;
+      }
+      .box{
+        height: 270px;
+      }
+      .tit{
+        margin-top: 10px;
+        @include fz(18px);
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

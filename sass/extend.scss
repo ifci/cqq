@@ -1,0 +1,139 @@
+/*
+ * Copyright (c) 2015 JKD TEAM (shjkd.cn)
+ * @Author: fcdcyy@sina.cn
+ *
+ * @DateTime: 2015-03-23 09:09:49
+ */
+
+@charset "utf-8";
+
+$color: #02b686;   //主体颜色
+$bg: #eee;      //主要背景
+$lcolor: #333;   //链接颜色
+$bd: #d6d6d6;   //边框颜色
+
+
+//字体大小方法
+@mixin fz($size: 12px){
+  font-size: $size;
+}
+//单边边框方法
+@mixin bor($dt, $ct: $bd){
+  border-#{$dt}: 1px solid $ct;
+}
+//全边框方法
+@mixin border($ct: $bd){
+  border: 1px solid $ct;
+}
+//外边距
+@mixin margin($margin: 10px){
+  margin: $margin;
+}
+//内边距
+@mixin padding($padding: 10px){
+  padding: $padding;
+}
+//文字对齐方式
+@mixin align($align: center){
+  text-align:$align;
+}
+//三角形
+@mixin tri($dire,$dc,$width){
+  width: 0;
+  height: 0;
+  line-height: 0;
+  border: $width solid transparent;
+  border-#{$dire}-color: $dc;
+}
+
+//过渡效果
+@mixin transition($time: 1, $ob:all, $ease: ease){
+  -webkit-transition: $time+s $ob $ease;
+  -moz-transition: $time+s $ob $ease;
+  -o-transition: $time+s $ob $ease;
+  transition: $time+s $ob $ease;
+}
+
+// 透明度
+@mixin opacity($deg: 10){
+  opacity: $deg / 10;
+  filter: alpha(opacity=$deg * 10);
+}
+
+
+
+
+
+
+%ffst{  //宋体
+  font-family: SimSun;
+}
+%ffht{  //黑体
+  font-family: SimHei;
+}
+%ffyh{  //微软雅黑
+  font-family: Microsoft yahei;
+}
+%ffar{  //Arial
+  font-family: Arial;
+}
+%icon{  //图标集
+  background-image: url(../images/icon.png);
+  background-repeat: no-repeat;
+}
+%w100{  //图片自适应
+  width: 100%;
+}
+%nowrap{  //单行文字
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+%inline{  //行内元素
+  display:inline-block;
+  *display:inline;
+  zoom:1;
+  vertical-align: middle;
+}
+%imgtc{    //图片的垂直居中
+  display: table-cell;
+  vertical-align:middle;
+  text-align:center;
+  *display: block;
+  *font-size: 175px;/*约为高度的0.873，200*0.873 约为175*/
+  *font-family:Arial;
+  width:200px;
+  height:200px;
+  border: 1px solid #eee;
+}
+%center{    //主体居中
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+%minw{    //最小宽度
+  min-width: 1200px;
+}
+%clearfix {
+  zoom:1;
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+%fl{
+  float: left;
+}
+%fr{
+  float: right;
+}
+%pr{
+  position: relative;
+}
+%pa{
+  position: absolute;
+}
