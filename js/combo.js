@@ -61,4 +61,33 @@ $(function() {
             }, 70);
         }, 100);
     }
+
+
+    /*企业荣誉大图*/
+    $('.honor .box').on(click, function(){
+        $('body').append('<div class="bg"></div><img class="zoomImg" src=""/>');
+        var $img = $('.zoomImg');
+        $img.attr('src', $(this).children('img').attr('src'));
+        var imgWidth = $img.width();
+        var imgHeight = $img.height();
+        var winWidth = $(window).width();
+        var winHeight = $(window).height();
+        var imgLeft = 0;
+        var imgTop = 0;
+        if(imgWidth > winWidth){
+            imgTop = (winHeight - imgHeight)/2;
+            $img.css({'left': '5%','top': imgTop,'width': '90%','height': 'auto'});
+        }else{
+            imgLeft = (winWidth - imgWidth)/2;
+            imgTop = (winHeight - imgHeight)/2;
+            //console.log($('.zoomImg').width());
+            $img.css({'left': imgLeft,'top': imgTop});
+        }
+    });
+
+    /*关闭弹出层*/
+    $('body').delegate('.bg', click, function(){
+        $(this).remove();
+        $('.zoomImg').remove();
+    })
 });

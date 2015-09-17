@@ -5,7 +5,7 @@
  *
  * @DateTime: 2015-03-23 09:09:49
  */
-.news_list li .time {
+.news_list li .time, .core .tit small {
   font-family: Arial; }
 
 .news_list li .tit, .news_l .news_np span, .news_l .news_np a, .pintro_list .tit {
@@ -13,31 +13,31 @@
   overflow: hidden;
   text-overflow: ellipsis; }
 
-.main_c .tit, .main_c .tabs a, .news_list li .time, .news_list li .more, .pshow li .tit {
+.main_c .tit, .main_c .tabs a, .news_list li .time, .news_list li .more, .pshow li .tit, .pdetails_sx .btn a, .pdetails_sx .sat a, .pdetails_sx .more i, .pdetails_sx .more span {
   display: inline-block;
   *display: inline;
   zoom: 1;
   vertical-align: middle; }
 
-.news_list li, .pshow li {
+.news_list li, .pshow li, .join li, .core li {
   zoom: 1; }
-  .news_list li:after, .pshow li:after {
+  .news_list li:after, .pshow li:after, .join li:after, .core li:after {
     content: ".";
     display: block;
     height: 0;
     clear: both;
     visibility: hidden; }
 
-.news_list li .box, .news_l, .pshow li:nth-child(odd) .con, .pshow li .box, .pshow li .con, .pintro_list li, .pdetails_zoom, .pdetails_sx {
+.news_list li .box, .news_l, .pshow li:nth-child(odd) .con, .pshow li .box, .pshow li .con, .pintro_list li, .pdetails_zoom, .pdetails_sx, .honor li, .join .box, .join .con, .core .box, .core .con {
   float: left; }
 
-.news_list li:nth-child(odd) .box, .news_r, .pshow li:nth-child(odd) .box {
+.news_list li:nth-child(odd) .box, .news_r, .pshow li:nth-child(odd) .box, .join li:nth-child(even) .box, .core li:nth-child(odd) .con {
   float: right; }
 
-.main_c .tit {
+.main_c .tit, .core li {
   position: relative; }
 
-.main_c i {
+.main_c i, .core .con i {
   position: absolute; }
 
 .main_t {
@@ -48,6 +48,7 @@
 .main_c {
   height: 190px;
   background: url(../images/pic_16.jpg) no-repeat;
+  background-position: top center;
   text-align: center;
   border-bottom: 1px solid #d6d6d6; }
   .main_c .tit {
@@ -288,13 +289,187 @@
     padding: 10px 0;
     border-bottom: 1px solid #d6d6d6; }
     .pdetails_sx .pri em {
-      font-size: 28px; }
+      font-size: 28px;
+      font-weight: bold; }
   .pdetails_sx .spa {
     line-height: 2;
     padding: 10px 0; }
     .pdetails_sx .spa span {
       margin-right: 30px;
       display: inline-block; }
+  .pdetails_sx .btn a {
+    text-align: center;
+    background: #02b686;
+    color: #fff;
+    width: 37%;
+    padding: 15px 0;
+    font-size: 18px; }
+    .pdetails_sx .btn a:first-child {
+      width: 58%;
+      margin-right: 5%; }
+    .pdetails_sx .btn a i {
+      font-size: 24px;
+      margin-right: 8px; }
+  .pdetails_sx .sat {
+    padding: 12px 0;
+    margin-top: 40px;
+    font-size: 16px;
+    border-top: 1px solid #d6d6d6;
+    border-bottom: 1px solid #d6d6d6; }
+    .pdetails_sx .sat a {
+      text-align: center;
+      border-right: 1px solid #d6d6d6;
+      width: 50%;
+      max-width: 150px; }
+      .pdetails_sx .sat a:first-child i {
+        color: #02b686; }
+    .pdetails_sx .sat i {
+      font-size: 24px;
+      margin-right: 10px; }
+  .pdetails_sx .more {
+    padding: 20px 0 20px 25px; }
+    .pdetails_sx .more a:hover {
+      color: #02b686; }
+      .pdetails_sx .more a:hover i {
+        color: #02b686; }
+    .pdetails_sx .more i {
+      font-size: 26px;
+      -webkit-transition: 0.8s all ease;
+      -moz-transition: 0.8s all ease;
+      -o-transition: 0.8s all ease;
+      transition: 0.8s all ease;
+      color: #d6d6d6; }
+
+.pdetails_c {
+  margin-top: 50px;
+  padding: 0 10px 100px; }
+  .pdetails_c .tit {
+    border-bottom: 1px solid #d6d6d6;
+    text-align: center;
+    color: #333;
+    line-height: 2; }
+    .pdetails_c .tit span {
+      display: block;
+      font-size: 20px; }
+  .pdetails_c .con {
+    line-height: 1.8;
+    padding: 10px 0; }
+
+/*关于草青青*/
+.about {
+  margin-top: 40px;
+  font-size: 16px;
+  line-height: 2;
+  padding: 10px; }
+  .about img {
+    margin: 0 10px; }
+  .about .color {
+    color: #02b686;
+    display: none; }
+
+.about_b img {
+  width: 23%;
+  margin: 0 0 0 1.5%; }
+
+/*企业荣誉*/
+.honor {
+  margin-top: 50px; }
+  .honor li {
+    width: 24%;
+    margin: 0 .5%; }
+    .honor li:hover {
+      color: #02b686; }
+      .honor li:hover .box {
+        border: 1px solid #02b686; }
+    .honor li .box {
+      border: 1px solid #d6d6d6;
+      cursor: pointer; }
+    .honor li img {
+      display: block;
+      width: 100%; }
+    .honor li .tit {
+      text-align: center;
+      font-size: 16px;
+      line-height: 2;
+      padding: 10px 0;
+      height: 78px; }
+
+.bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  z-index: 10; }
+
+.zoomImg {
+  position: fixed;
+  z-index: 11; }
+
+/*招商加盟*/
+.join {
+  padding: 50px 0 100px; }
+  .join .box {
+    width: 53%; }
+    .join .box img {
+      width: 100%; }
+  .join .con {
+    width: 47%;
+    text-align: center;
+    font-size: 20px;
+    color: #333;
+    padding: 50px 30px;
+    line-height: 1.8; }
+
+/*核心优势*/
+.core {
+  margin-top: 50px; }
+  .core li {
+    border-bottom: 1px solid #d6d6d6;
+    padding: 50px 0; }
+    .core li:nth-child(odd) .con i {
+      right: 0; }
+    .core li.three .box, .core li.three .con {
+      width: 100%; }
+  .core .box {
+    width: 38%; }
+    .core .box img {
+      width: 100%;
+      display: block; }
+  .core .con {
+    width: 62%;
+    padding: 20px 36px;
+    font-size: 16px;
+    line-height: 2; }
+    .core .con i {
+      display: block;
+      width: 288px;
+      height: 226px;
+      background-image: url(../images/num.png);
+      background-repeat: no-repeat;
+      right: 38%;
+      top: 80px; }
+  .core .tit span {
+    color: #02b686;
+    font-size: 28px; }
+  .core .tit small {
+    margin-left: 10px;
+    font-size: 16px; }
+  .core .i1 {
+    background-position: 0 16.5%; }
+  .core .i2 {
+    background-position: 0 33%; }
+  .core .i3 {
+    background-position: 0 50%; }
+  .core .i4 {
+    background-position: 0 66.5%; }
+  .core .i5 {
+    background-position: 0 83%; }
+  .core .i6 {
+    background-position: 0 100%; }
 
 @media screen and (max-width: 750px) {
   .header {
@@ -384,6 +559,62 @@
 
   .pintro_list li {
     display: inline-block;
-    float: none; } }
+    float: none; }
+
+  .pdetails_sx {
+    width: 94%; }
+
+  .pdetails_t .swiper-container {
+    width: 21%;
+    height: 50vh;
+    margin-left: 3%; }
+    .pdetails_t .swiper-container .prev, .pdetails_t .swiper-container .next {
+      height: 30px;
+      line-height: 30px; }
+
+  .pdetails_zoom {
+    width: 69%;
+    height: 50vh; }
+
+  .about {
+    margin-top: 10px; }
+    .about .fl, .about .fr {
+      display: none; }
+    .about .color {
+      display: block; }
+
+  .about_b img {
+    width: 48%; }
+
+  .honor li {
+    width: 47%;
+    margin: 0 0 0 2%; }
+
+  .join {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0; }
+    .join .box {
+      width: 90%; }
+    .join .con {
+      width: 100%;
+      padding: 20px 0;
+      text-align: justify; }
+
+  .core {
+    margin-top: -50px;
+    padding: 0 10px; }
+    .core li {
+      padding: 20px 0; }
+    .core .box, .core .con {
+      width: 100%; }
+    .core .con {
+      padding: 0 10px; }
+      .core .con i {
+        width: 150px;
+        height: 116px;
+        background-size: 100%;
+        top: 50px;
+        right: 0; } }
 
 /*# sourceMappingURL=combo.css.map */

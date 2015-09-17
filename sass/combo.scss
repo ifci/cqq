@@ -9,6 +9,7 @@
 .main_c{
   height: 190px;
   background: url(../images/pic_16.jpg) no-repeat;
+  background-position: top center;
   @include align;
   @include bor(bottom);
   .tit{
@@ -268,10 +269,6 @@
 
 
 /*产品介绍*/
-.pintro{
-
-}
-
 .pintro_video{
   border: 5px solid $color;
   max-width: 600px;
@@ -351,6 +348,7 @@
     @include bor(bottom);
     em{
       @include fz(28px);
+      font-weight: bold;
     }
   }
   .spa{
@@ -360,6 +358,263 @@
       margin-right: 30px;
       display: inline-block;
     }
+  }
+  .btn{
+    a{
+      @include align;
+      @extend %inline;
+      background: $color;
+      color: #fff;
+      width: 37%;
+      padding: 15px 0;
+      @include fz(18px);
+      &:first-child{
+        width: 58%;
+        margin-right: 5%;
+      }
+      i{
+        @include fz(24px);
+        margin-right: 8px;
+      }
+    }
+  }
+  .sat{
+    padding: 12px 0;
+    margin-top: 40px;
+    @include fz(16px);
+    @include bor(top);
+    @include bor(bottom);
+    a{
+      @include align;
+      @extend %inline;
+      @include bor(right);
+      width: 50%;
+      max-width: 150px;
+      &:first-child{
+        i{
+          color: $color;
+        }
+      }
+    }
+    i{
+      @include fz(24px);
+      margin-right: 10px;
+    }
+  }
+  .more{
+    padding: 20px 0 20px 25px;
+    a{
+      &:hover{
+        color: $color;
+        i{
+          color: $color;
+        }
+      }
+    }
+    i,span{
+      @extend %inline;
+    }
+    i{
+      @include fz(26px);
+      @include transition(.8);
+      color: #d6d6d6;
+    }
+  }
+}
+
+.pdetails_c{
+  margin-top: 50px;
+  padding: 0 10px 100px;
+  .tit{
+    @include bor(bottom);
+    @include align;
+    color: #333;
+    line-height: 2;
+    span{
+      display: block;
+      @include fz(20px);
+    }
+  }
+  .con{
+    line-height: 1.8;
+    padding: 10px 0;
+  }
+}
+
+
+/*关于草青青*/
+.about{
+  margin-top: 40px;
+  @include fz(16px);
+  line-height: 2;
+  padding: 10px;
+  img{
+    margin: 0 10px;
+  }
+  .color{
+    color: $color;
+    display: none;
+  }
+}
+.about_b{
+  img{
+    width: 23%;
+    margin: 0 0 0 1.5%;
+  }
+}
+
+
+/*企业荣誉*/
+.honor{
+  margin-top: 50px;
+  li{
+    @extend %fl;
+    width: 24%;
+    margin: 0 .5%;
+    &:hover{
+      color: $color;
+      .box{
+        @include border($color);
+      }
+    }
+    .box{
+      @include border;
+      cursor: pointer;
+    }
+    img{
+      display: block;
+      width: 100%;
+    }
+    .tit{
+      @include align;
+      @include fz(16px);
+      line-height: 2;
+      padding: 10px 0;
+      height: 78px;
+    }
+  }
+}
+
+.bg{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #000;
+  @include opacity(5);
+  z-index: 10;
+}
+
+.zoomImg{
+  position: fixed;
+  z-index: 11;
+}
+
+/*招商加盟*/
+.join{
+  padding: 50px 0 100px;
+  li{
+    @extend %clearfix;
+  }
+  li:nth-child(even){
+    .box{
+      @extend %fr;
+    }
+  }
+  .box{
+    width: 53%;
+    @extend %fl;
+    img{
+      width: 100%;
+    }
+  }
+  .con{
+    @extend %fl;
+    width: 47%;
+    @include align;
+    @include fz(20px);
+    color: #333;
+    padding: 50px 30px;
+    line-height: 1.8;
+  }
+}
+
+
+/*核心优势*/
+.core{
+  margin-top: 50px;
+  li{
+    @extend %clearfix,%pr;
+    @include bor(bottom);
+    padding: 50px 0;
+    &:nth-child(odd){
+      .con{
+        @extend %fr;
+        i{
+          right: 0;
+        }
+      }
+    }
+    &.three{
+      .box,.con{
+        width: 100%;
+      }
+    }
+  }
+  .box{
+    @extend %fl;
+    width: 38%;
+    img{
+      width: 100%;
+      display: block;
+    }
+  }
+  .con{
+    width: 62%;
+    @extend %fl;
+    padding: 20px 36px;
+    @include fz(16px);
+    line-height: 2;
+    i{
+      display: block;
+      @extend %pa;
+      width: 288px;
+      height: 226px;
+      background-image: url(../images/num.png);
+      background-repeat: no-repeat;
+      right: 38%;
+      top: 80px;
+    }
+  }
+  .tit{
+    span{
+      color: $color;
+      @include fz(28px);
+    }
+    small{
+      @extend %ffar;
+      margin-left: 10px;
+      @include fz(16px);
+    }
+  }
+  .i1{
+    background-position: 0 16.5%;
+  }
+  .i2{
+    background-position: 0 33%;
+  }
+  .i3{
+    background-position: 0 50%;
+  }
+  .i4{
+    background-position: 0 66.5%;
+  }
+  .i5{
+    background-position: 0 83%;
+  }
+  .i6{
+    background-position: 0 100%;
   }
 }
 
@@ -483,6 +738,87 @@
     }
   }
 
+
+  .pdetails_sx{
+    width: 94%;
+  }
+
+  .pdetails_t{
+    .swiper-container{
+      width: 21%;
+      height: 50vh;
+      margin-left: 3%;
+      .prev,.next{
+        height: 30px;
+        line-height: 30px;
+      }
+    }
+  }
+
+  .pdetails_zoom{
+    width: 69%;
+    height: 50vh;
+  }
+
+
+  .about{
+    margin-top: 10px;
+    .fl,.fr{
+      display: none;
+    }
+    .color{
+      display: block;
+    }
+  }
+
+  .about_b{
+    img{
+      width: 48%;
+    }
+  }
+
+
+  .honor{
+    li{
+      width: 47%;
+      margin: 0 0 0 2%;
+    }
+  }
+
+  .join{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0;
+    .box{
+      width: 90%;
+    }
+    .con{
+      width: 100%;
+      padding: 20px 0;
+      text-align: justify;
+    }
+  }
+
+  .core{
+    margin-top: -50px;
+    padding: 0 10px;
+    li{
+      padding: 20px 0;
+    }
+    .box,.con{
+      width: 100%;
+    }
+    .con{
+      padding: 0 10px;
+      i{
+        width: 150px;
+        height: 116px;
+        background-size: 100%;
+        top: 50px;
+        right: 0;
+      }
+    }
+  }
 }
 
 
